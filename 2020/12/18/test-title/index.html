@@ -276,7 +276,7 @@ inquirer _通用的命令行用户界面集合，用">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/28.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -941,7 +941,7 @@ gitment.render('gitment-content');
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="kkk title">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="kkk title">
                         
                         <span class="card-title">kkk title</span>
                     </div>
@@ -950,6 +950,9 @@ gitment.render('gitment-content');
                     <div class="summary block-with-text">
                         
                             kkk
+这是标题
+
+
                         
                     </div>
                     <div class="publish-info">
@@ -975,7 +978,7 @@ gitment.render('gitment-content');
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="十大经典排序算法整理汇总（附代码）">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="十大经典排序算法整理汇总（附代码）">
                         
                         <span class="card-title">十大经典排序算法整理汇总（附代码）</span>
                     </div>
@@ -1191,7 +1194,7 @@ conf: 'prod_14cf5cac9b6d384ef4bccb7a3564646f'
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2017-2020 Saya. 版权所有
+            &copy; 2020-2020 Saya. 版权所有
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
@@ -1246,8 +1249,10 @@ conf: 'prod_14cf5cac9b6d384ef4bccb7a3564646f'
     $(document).ready(function () {
 
         var int = setInterval(fixCount, 50);  // 50ms周期检测函数
-        var pvcountOffset = 80000; // 初始化首次数据
-        var uvcountOffset = 20000;
+        /* var pvcountOffset = 80000; // 初始化首次数据
+        var uvcountOffset = 20000; */
+        var pvcountOffset = 0; // 初始化首次数据
+        var uvcountOffset = 0;
 
         function fixCount() {
             if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {

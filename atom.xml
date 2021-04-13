@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bloodcv.github.io/"/>
-  <updated>2020-12-18T03:17:59.102Z</updated>
+  <updated>2021-04-12T09:15:11.027Z</updated>
   <id>https://bloodcv.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://bloodcv.github.io/2020/12/18/kkk-title/"/>
     <id>https://bloodcv.github.io/2020/12/18/kkk-title/</id>
     <published>2020-12-18T03:17:51.000Z</published>
-    <updated>2020-12-18T03:17:59.102Z</updated>
+    <updated>2021-04-12T09:15:11.027Z</updated>
     
     <summary type="html">
     
@@ -65,7 +65,7 @@
     <link href="https://bloodcv.github.io/2020/02/16/sort-algorithms/"/>
     <id>https://bloodcv.github.io/2020/02/16/sort-algorithms/</id>
     <published>2020-02-16T07:09:23.000Z</published>
-    <updated>2020-12-18T10:16:27.470Z</updated>
+    <updated>2021-04-12T09:13:57.128Z</updated>
     
     <summary type="html">
     
@@ -73,11 +73,11 @@
       
         
         
-          &lt;blockquote&gt;
-&lt;p&gt;关注公众号【算法码上来】，每日算法干货马上就来！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;/medias/contact.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;
+          &lt;!-- &gt; 关注公众号【算法码上来】，每日算法干货马上就来！
+
+![](/medias/contact.jpg) --&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;
         
       
     

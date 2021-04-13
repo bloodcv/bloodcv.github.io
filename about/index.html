@@ -318,7 +318,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     <div class="col s12 m12 l4">
                         <div class="profile center-align">
                             <div class="avatar">
-                                <img src="" alt="saya"
+                                <img src="/medias/avatars/qianqian.png" alt="saya"
                                     class="circle responsive-img avatar-img">
                             </div>
                             <div class="author">
@@ -446,7 +446,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         },
         xAxis: {
             type: 'category',
-            data: ["2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12"]
+            data: ["2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04"]
         },
         yAxis: {
             type: 'value',
@@ -456,7 +456,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,1,0,0,0,0,0,0,0,0,0,2],
+                data: [0,0,0,0,0,0,0,0,2,0,0,0,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -582,9 +582,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 <li><b>本科</b><br>华中科技大学<br>2011/09 - 2015/07</li>
 </ul>
 <h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul>
-<li><b>电子邮箱</b><br><a href="mailto:554365000@qq.com" target="_blank" rel="noopener">554365000@qq.com</a></li>
+<li><b>电子邮箱</b><br><a href="mailto:554365000@qq.com" target="_blank" rel="noopener">554365000@qq.com</a><!-- [](/medias/contact.jpg) --></li>
 </ul>
-<p>; <a href="/medias/contact.jpg"></a></p>
 
                         </div>
                 </div>
@@ -595,7 +594,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2017-2020 Saya. 版权所有
+            &copy; 2020-2020 Saya. 版权所有
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
@@ -650,8 +649,10 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
     $(document).ready(function () {
 
         var int = setInterval(fixCount, 50);  // 50ms周期检测函数
-        var pvcountOffset = 80000; // 初始化首次数据
-        var uvcountOffset = 20000;
+        /* var pvcountOffset = 80000; // 初始化首次数据
+        var uvcountOffset = 20000; */
+        var pvcountOffset = 0; // 初始化首次数据
+        var uvcountOffset = 0;
 
         function fixCount() {
             if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
