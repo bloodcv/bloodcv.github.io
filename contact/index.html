@@ -324,11 +324,12 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         clientSecret: 'd0426e3d563d53c38b81f6fb31588447d467b123',
         repo: 'bloodcv.github.io',
         owner: 'bloodcv',
-        admin: "bloodcv",
+        admin: 'bloodcv',
         id: 'contact/index.html',
-        proxy: '',
+        // proxy: 'theme.gitalk.proxy',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
+    console.log(`===page.path===`, page.path)
 
     gitalk.render('gitalk-container');
 </script>
