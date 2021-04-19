@@ -4,13 +4,29 @@
   
     
     <entry>
-      <title>kkk title</title>
-      <link href="/2020/12/18/kkk-title/"/>
-      <url>/2020/12/18/kkk-title/</url>
+      <title>基于create-react-app 创建react项目</title>
+      <link href="/2021/04/19/react-create/"/>
+      <url>/2021/04/19/react-create/</url>
       
-        <content type="html"><![CDATA[<h1 id="kkk"><a href="#kkk" class="headerlink" title="kkk"></a>kkk</h1><blockquote><p>这是标题</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="create-react-app"><a href="#create-react-app" class="headerlink" title="create-react-app ."></a>create-react-app .</h2><h2 id="默认项目目录"><a href="#默认项目目录" class="headerlink" title="默认项目目录"></a>默认项目目录</h2><h2 id="修改项目目录"><a href="#修改项目目录" class="headerlink" title="修改项目目录"></a>修改项目目录</h2><h2 id="webpack配置相关"><a href="#webpack配置相关" class="headerlink" title="webpack配置相关"></a>webpack配置相关</h2><p>## </p>]]></content>
       
       
+      <categories>
+          
+          <category> react </category>
+          
+          <category> 项目搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> react </tag>
+            
+            <tag> 项目搭建 </tag>
+            
+        </tags>
       
     </entry>
     

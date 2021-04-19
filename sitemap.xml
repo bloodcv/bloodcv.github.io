@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bloodcv.github.io/2020/12/18/kkk-title/</loc>
+    <loc>https://bloodcv.github.io/2020/12/18/test-title/</loc>
     
-    <lastmod>2021-04-13T08:32:02.024Z</lastmod>
+    <lastmod>2021-04-19T03:02:54.093Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://bloodcv.github.io/2021/04/19/react-create/</loc>
+    
+    <lastmod>2021-04-19T03:02:48.310Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>https://bloodcv.github.io/contact/index.html</loc>
     
     <lastmod>2020-12-21T02:54:57.167Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bloodcv.github.io/2020/12/18/test-title/</loc>
-    
-    <lastmod>2020-12-18T10:16:16.781Z</lastmod>
     
   </url>
   
