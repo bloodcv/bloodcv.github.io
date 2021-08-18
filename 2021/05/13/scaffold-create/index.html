@@ -1,0 +1,1542 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="脚手架生成前端项目, saya bloodcv 华中科技大学 hust 前端">
+    <!-- 原来的，下面的是我的<meta name="baidu-site-verification" content="fmlEuI34ir" /> -->
+    <meta name="baidu-site-verification" content="code-u00NyJAFAk">
+    <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
+    <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
+    <meta name="description" content="背景  像我们熟悉的 vue-cli，react-native-cli 等脚手架  只需要输入简单的init命令即可快速帮我们生成一个初始项目  另外在方便的同时这些初始化项目却缺少一些自定义的必须品，比如api拦截的封装、路由拦截的封装、">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>脚手架生成前端项目 | Saya&#39;s Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?46e79e71af0709a5b9106bf20cecc493";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+    
+        <script>
+            (function(){
+                var bp = document.createElement('script');
+                var curProtocol = window.location.protocol.split(':')[0];
+                if (curProtocol === 'https') {
+                    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+                }
+                else {
+                    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                }
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(bp, s);
+            })();
+        </script>
+    
+
+    <script>
+        (function(){
+        var src = "https://jspassport.ssl.qhimg.com/11.0.1.js?d182b3f28525f2db83acfaaf6e696dba";
+        document.write('<script src="' + src + '" id="sozz"><\/script>');
+        })();
+    </script>
+
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+<body>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Saya's Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <i class="fa fa-comments"></i>
+            
+            <span>留言板</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Saya's Blog</div>
+        <div class="logo-desc">
+            
+            华中科技大学 | 前端工程师
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-comments"></i>
+                
+                留言板
+            </a>
+        </li>
+        
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        脚手架生成前端项目
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                        <a href="/tags/项目搭建/" target="_blank">
+                            <span class="chip bg-color">项目搭建</span>
+                        </a>
+                        
+                        <a href="/tags/工具/" target="_blank">
+                            <span class="chip bg-color">工具</span>
+                        </a>
+                        
+                        <a href="/tags/脚本/" target="_blank">
+                            <span class="chip bg-color">脚本</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/基建/" class="post-category" target="_blank">
+                            基建
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-05-13
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                    saya
+                    
+                </div>
+
+                
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+                
+
+                
+                <div id="busuanzi_container_page_pv" class="info-break-policy">
+                    <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                    <span id="busuanzi_value_page_pv"></span>
+                </div>
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a><span id="pre">背景</span></h2><p>  像我们熟悉的 vue-cli，react-native-cli 等脚手架<br>  只需要输入简单的init命令即可快速帮我们生成一个初始项目<br>  另外在方便的同时这些初始化项目却缺少一些自定义的必须品，比如api拦截的封装、路由拦截的封装、ui库的按需引入配置等等<br>  在实际工作中，我们可以定制一个属于自己的脚手架和对应的初始化项目库，来提高自己的工作效率</p>
+<blockquote>
+<ul>
+<li>为什么需要需要脚手架？<ul>
+<li>减少重复性的工作，不再需要复制其他项目再删除无关代码，或者从零创建一个项目和文件。</li>
+<li>根据交互动态生成项目结构和配置文件等。</li>
+<li>多人协作更为方便，不需要把文件传来传去。</li>
+<li>工程化、组织化管理项目架构，统一项目配置和架构等</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a><span id="idea">思路</span></h2><p>  要开发脚手架，首先要理清思路，脚手架是如何工作的？<br>  我们可以借鉴 vue-cli 的基本思路。<br>  vue-cli 是将项目模板放在 git 上，运行的时候再根据用户交互下载不同的模板并做相应配置替换，<br>  经过模板引擎渲染出来，生成项目。<br>  这样将模板和脚手架分离，就可以各自维护，即使模板有变动，只需要上传最新的模板即可，<br>  而不需要用户去更新脚手架就可以生成最新的项目。那么就可以按照这个思路来进行开发了。</p>
+<h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a><span id="dep">依赖</span></h2><ul>
+<li><strong>概述</strong><blockquote>
+<p>主要依赖如下</p>
+<ul>
+<li>commander _可以自动的解析命令和参数，用于处理用户输入的命令_</li>
+<li>download-git-repo _下载并提取 git 仓库，用于下载项目模板_</li>
+<li>inquirer _通用的命令行用户界面集合，用于和用户进行交互_</li>
+<li>handlebars _模板引擎，将用户提交的信息动态填充到文件中_</li>
+<li>ora _下载过程久的话，可以用于显示下载中的动画效果_</li>
+<li>chalk _可以给终端的字体加上颜色_</li>
+<li>log-symbols _可以在终端上显示出 √ 或 × 等的图标_</li>
+<li>shelljs _命令行操作工具,通过代码执行shell语句_</li>
+<li>fs-extra _支持对文件的各种操作_</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<pre><code>如果是使用ts的小伙伴 还需要引入以下依赖
+`@types/commander`
+`@types/fs-extra`
+`@types/inquirer`
+`@types/shelljs`
+
+使用eslint + prettier做代码规范</code></pre><details>
+<summary>展开查看'download-git-repo'的声明代码：</summary>
+
+<pre class="line-numbers language-typescript"><code class="language-typescript"><span class="token keyword">declare</span> <span class="token keyword">module</span> <span class="token string">'download-git-repo'</span> <span class="token punctuation">{</span>
+    namespace download <span class="token punctuation">{</span>
+        <span class="token keyword">interface</span> <span class="token class-name">Options</span> <span class="token punctuation">{</span>
+            clone<span class="token punctuation">:</span> <span class="token keyword">boolean</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">download</span><span class="token punctuation">(</span>
+        direct<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">,</span>
+        targeName<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">,</span>
+        options<span class="token punctuation">:</span> download<span class="token punctuation">.</span>Options<span class="token punctuation">,</span>
+        callback<span class="token punctuation">:</span> <span class="token punctuation">(</span>err<span class="token punctuation">:</span> Error<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token keyword">void</span>
+    <span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span>
+    <span class="token keyword">export</span> <span class="token operator">=</span> download
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</details>
+
+
+<h2 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a><span id="cre">搭建</span></h2><ul>
+<li><h5 id="架构"><a href="#架构" class="headerlink" title="架构"></a><span id="arch">架构</span></h5><blockquote>
+<p>项目文件架构如下</p>
+</blockquote>
+<pre><code>  ├─ .vscode
+  │  └─ settings.json
+  ├─ src (ts代码文件)
+  │  ├─ bin (程序入口文件)
+  │  │  └─ main.ts
+  │  ├─ commands (程序逻辑文件)
+  │  │  ├─ cli (脚本名)
+  │  │  │  ├─ index.ts (脚本主执行文件)
+  │  │  │  ├─ inquirer.ts (脚本命令行询问声明文件)
+  │  │  │  └─ methods.ts (脚本内使用方法)
+  │  │  └─ ... (脚本名)
+  │  │     └─ index.ts (脚本主执行文件)
+  │  │     └─ inquirer.ts (脚本命令行询问声明文件)
+  │  │     └─ methods.ts  (脚本内使用方法)
+  │  ├─ config (项目共用变量)
+  │  │  └─ setting.ts
+  │  └─ types (存储声明文件)
+  │     ├─ **.d.ts
+  │     └─ types.d.ts
+  ├─ .editorconfig
+  ├─ .eslintignore
+  ├─ .eslintrc.js
+  ├─ .gitignore
+  ├─ .prettierrc.js
+  ├─ package.json
+  ├─ tsconfig.json
+  ├─ tslint.json
+  └─ yarn.lock
+  ├─ README.md</code></pre></li>
+<li><p><strong>初始化</strong></p>
+<blockquote>
+<p>_生成 package.json_ 执行 <code>npm init</code><br>_安装相关依赖_ 执行 <code>yarn add ...</code></p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><strong>创建相关文件夹和文件</strong><blockquote>
+<ul>
+<li>架构文件创建：参考<a href="#arch">架构</a>   </li>
+<li>配置eslint + prettier（整理中…）</li>
+<li>配置tsconfig.json</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h2 id="编写"><a href="#编写" class="headerlink" title="编写"></a><span id="code">编写</span></h2><ul>
+<li><strong>处理命令行</strong></li>
+</ul>
+<blockquote>
+<p>node.js 内置了对命令行操作的支持，在 package.json 中的 bin 字段可以定义命令名和关联的执行文件。所以现在 package.json 中加上 bin 的内容：</p>
+</blockquote>
+<pre><code>{
+    ...
+    &quot;bin&quot;: {
+        &quot;saya&quot;: &quot;./lib/bin/main.js&quot;
+    },
+    ...
+}
+
+发布后全局下载脚本便可执行命令 saya xxx</code></pre><ul>
+<li><strong>定义命令</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li>调用 version(‘1.0.0’, ‘-v, –version’) 会将 -v 和 –version 添加到命令中，可以通过这些选项打印出版本号。   </li>
+<li>调用 command(‘init <name>‘) 定义 init 命令，name 则是必传的参数，为项目名。   </name></li>
+<li>action() 则是执行 init 命令会发生的行为，要生成项目的过程就是在这里面执行的，这里暂时只打印出 name。</li>
+<li>alias 定义命令缩写</li>
+<li>description 定义命令说明 </li>
+</ul>
+</blockquote>
+<details>
+<summary>展开查看代码：</summary>
+
+
+<pre class="line-numbers language-typescript"><code class="language-typescript">src<span class="token operator">/</span>bin<span class="token operator">/</span>man<span class="token punctuation">.</span>ts
+
+<span class="token keyword">const</span> program <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'commander'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+program<span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span><span class="token string">'1.0.0'</span><span class="token punctuation">,</span> <span class="token string">'-v, --version'</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">'init &lt;name>'</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+program<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</details>
+
+<blockquote>
+<p>其实到这里，已经可以执行 init 命令了。我们来测试一下，在根目录执行<br><code>ts-node src/bin/man.js init HelloWorld</code><br>可以看到命令行工具也打印出了 HelloWorld，那么很清楚， action((name) =&gt; {}) 这里的参数 name，就是我们执行 init 命令时输入的项目名称</p>
+</blockquote>
+<blockquote>
+<p>现在我们稍微加几行代码完善一下</p>
+</blockquote>
+<details>
+<summary>展开查看完整代码：</summary>
+
+<pre class="line-numbers language-typescript"><code class="language-typescript">src<span class="token operator">/</span>bin<span class="token operator">/</span>man<span class="token punctuation">.</span>ts
+
+<span class="token keyword">import</span> fs <span class="token keyword">from</span> <span class="token string">'fs-extra'</span>
+<span class="token keyword">import</span> command <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'commander'</span><span class="token punctuation">)</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> as path <span class="token keyword">from</span> <span class="token string">'path'</span>
+
+process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>NODE_PATH <span class="token operator">=</span> __dirname <span class="token operator">+</span> <span class="token string">'/../node_modules'</span>
+
+<span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token punctuation">(</span>command<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span>
+    path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../commands/'</span><span class="token punctuation">,</span> command<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 获取脚本版本信息 -v --version</span>
+command<span class="token punctuation">.</span><span class="token function">version</span><span class="token punctuation">(</span>
+    JSON<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>
+        fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'../../package.json'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">.</span>version<span class="token punctuation">,</span>
+    <span class="token string">'-v, --version'</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 信息的首行提示</span>
+command<span class="token punctuation">.</span><span class="token function">usage</span><span class="token punctuation">(</span><span class="token string">'&lt;command>'</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 引入cli命令</span>
+command
+    <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">'cli &lt;name>'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">'Generate a new my project'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">alias</span><span class="token punctuation">(</span><span class="token string">'i'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> <span class="token keyword">string</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 引入cli命令入口文件并执行</span>
+        <span class="token function">require</span><span class="token punctuation">(</span><span class="token function">res</span><span class="token punctuation">(</span><span class="token string">'cli/index'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 引入qtest命令</span>
+command
+    <span class="token punctuation">.</span><span class="token function">command</span><span class="token punctuation">(</span><span class="token string">'qtest'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">description</span><span class="token punctuation">(</span><span class="token string">'command test'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">alias</span><span class="token punctuation">(</span><span class="token string">'qt'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 引入qtest命令入口文件并执行</span>
+        <span class="token function">require</span><span class="token punctuation">(</span><span class="token function">res</span><span class="token punctuation">(</span><span class="token string">'qtest/index'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">/*
+.parse的第一个参数是要解析的字符串数组，也可以省略参数而使用process.argv。
+如果参数遵循与 node 不同的约定，可以在第二个参数中传递from选项：
+'node': 默认值，argv[0]是应用，argv[1]是要跑的脚本，后续为用户参数；
+'electron': argv[1]根据 electron 应用是否打包而变化；
+'user': 来自用户的所有参数。
+ */</span>
+command<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">// 没有键入命令时 展示help信息提示</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>command<span class="token punctuation">.</span>args <span class="token operator">||</span> <span class="token operator">!</span>command<span class="token punctuation">.</span>args<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    command<span class="token punctuation">.</span><span class="token function">help</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</details>
+
+
+<ul>
+<li><strong>构建主程序逻辑文件</strong></li>
+</ul>
+<blockquote>
+<p>这是上面提到的命令入口文件<br>这里我们只留下了骨架逻辑，主要方法放在methods中，让入口更简洁明了</p>
+</blockquote>
+<blockquote>
+<p>src/commands/cli/index.ts完整代码</p>
+</blockquote>
+<!--<details>-->
+<!--<summary>展开查看src/commands/cli/index.ts完整代码</summary>-->
+
+<pre><code>src/commands/cli/index.ts
+
+import fs from &#39;fs-extra&#39;
+// import program from &#39;commander&#39;
+import { hasPro, runProject } from &#39;./methods&#39;
+
+// name是要创建的项目名称
+module.exports = (name: string) =&gt; {
+    // 项目存在
+    if (fs.existsSync(name)) {
+        hasPro(name)
+    } else {
+        // 项目不存在
+        runProject(name)
+    }
+}</code></pre><!--</details>-->
+
+<blockquote>
+<p>src/commands/cli/methods.ts完整代码</p>
+</blockquote>
+<!--<details>-->
+<!--<summary>展开查看src/commands/cli/methods.ts完整代码</summary>-->
+
+<pre><code>import fs from &#39;fs-extra&#39;
+import shell from &#39;shelljs&#39;
+import download from &#39;download-git-repo&#39;
+import handlebars from &#39;handlebars&#39;
+import inquirer from &#39;inquirer&#39;
+import ora from &#39;ora&#39;
+import chalk from &#39;chalk&#39;
+import symbols from &#39;log-symbols&#39;
+import { initInquire } from &#39;./inquirer&#39;
+
+// 执行install命令
+const installAct = async (name: string): Promise&lt;any&gt; =&gt; {
+    try {
+        const installAnswers = await inquirer.prompt([
+            {
+                type: &#39;confirm&#39;,
+                message: `是否执行install?`,
+                name: &#39;install&#39;
+            }
+        ])
+        // 确定执行install
+        if (installAnswers.install) {
+            try {
+                const answers = await inquirer.prompt([
+                    {
+                        type: &#39;list&#39;,
+                        message: &#39;请选择执行方式:&#39;,
+                        name: &#39;type&#39;,
+                        choices: [&#39;npm&#39;, &#39;cnpm&#39;, &#39;yarn&#39;]
+                    }
+                ])
+                // 进入项目文件夹
+                shell.cd(name)
+                // shell.exec(&#39;ls&#39;)
+                // 获取执行方式
+                let code = answers.type
+                // npm 和 cnpm需要增加install
+                if (answers.type === &#39;npm&#39; || answers.type === &#39;cnpm&#39;) {
+                    code += &#39; install&#39;
+                }
+                // 执行命令
+                if (shell.exec(code).code !== 0) {
+                    console.log(symbols.error, chalk.red(`*** 运行出错 ***`))
+                    shell.exit(1)
+                } else {
+                    // 打开这个会因为跳出执行目录而造成install失败，后续不操作shell可注释
+                    // shell.cd(&#39;..&#39;)
+                }
+            } catch (err) {
+                console.log(symbols.error, chalk.red(`*** 运行出错 ***: ${err}`))
+            }
+        }
+    } catch (err) {
+        console.log(symbols.error, chalk.red(`*** 运行出错 ***: ${err}`))
+    }
+}
+
+// 拉取git上的初始化项目模版
+const initProject = (name: string, answers: SayaSpace.InitAnswer): void =&gt; {
+    const spinner = ora(`正在创建 ${name}...`)
+    spinner.start()
+    // 从git拉取模版项目
+    download(
+        &#39;https://github.com:bloodcv/Scaffold#vue3&#39;,
+        name,
+        { clone: true },
+        err =&gt; {
+            if (err) {
+                spinner.fail()
+                console.log(symbols.error, chalk.red(`*** 运行出错 ***: ${err}`))
+            } else {
+                // 项目模板中的配置用的package-init
+                const fileName = `${name}/package-init.json`
+                // 获取用户选择的配置项
+                const meta = { name, ...answers }
+                // 初始化package-init存在
+                if (fs.existsSync(fileName)) {
+                    // 读取package-init.json文件
+                    const content = fs.readFileSync(fileName).toString()
+                    // 将用户选择的配置项对配置文件进行改写
+                    const result = handlebars.compile(content)(meta)
+                    // 使用初始化package-init覆盖原始package
+                    fs.copy(fileName, `${name}/package.json`)
+                        .then(() =&gt; {
+                            try {
+                                // 开始覆盖
+                                fs.writeFileSync(`${name}/package.json`, result)
+                                // 删除package-init
+                                fs.remove(fileName).then(() =&gt; {
+                                    spinner.succeed()
+                                    console.log(symbols.success, chalk.green(&#39;项目初始化完成&#39;))
+                                    // 是否执行install
+                                    installAct(name)
+                                })
+                            } catch (err) {
+                                spinner.fail(&#39;*** 创建失败 ***&#39;)
+                                console.error(err)
+                            }
+                        })
+                        .catch(err =&gt; {
+                            spinner.fail(&#39;*** 创建失败 ***&#39;)
+                            console.error(err)
+                        })
+                } else {
+                    // 初始化package-init不存在
+                    spinner.fail(&#39;*** 创建失败 ***&#39;)
+                    console.log(symbols.error, chalk.red(`*** 创建失败 ***`))
+                }
+            }
+        }
+    )
+}
+
+// 项目不存在则运行创建
+export const runProject = async (name: string): Promise&lt;any&gt; =&gt; {
+    try {
+        const answers = await inquirer.prompt&lt;SayaSpace.InitAnswer&gt;(initInquire)
+        initProject(name, answers)
+    } catch (err) {
+        console.log(symbols.error, chalk.red(`*** 运行出错 ***: ${err}`))
+    }
+}
+
+// 项目存在的时候执行删除重建
+export const hasPro = async (name: string): Promise&lt;any&gt; =&gt; {
+    try {
+        const answers = await inquirer.prompt([
+            {
+                type: &#39;confirm&#39;,
+                message: `是否删除项目 ${name} 并重建?`,
+                name: &#39;reCreate&#39;,
+                prefix: &#39;项目已存在&#39;
+            }
+        ])
+        // 删除项目并重建
+        if (answers.reCreate) {
+            // 删除已存在的项目
+            fs.remove(`${name}`)
+                .then(() =&gt; {
+                    console.log(symbols.success, chalk.blue(&#39;*** 删除完成 ***&#39;))
+                    runProject(name)
+                })
+                .catch(err =&gt;
+                    console.log(symbols.error, chalk.red(`*** 删除失败 ***: ${err}`))
+                )
+        } else {
+            console.log(symbols.success, chalk.blue(&#39;*** 已退出 ***&#39;))
+        }
+    } catch (err) {
+        console.log(symbols.error, chalk.red(`*** 运行出错 ***: ${err}`))
+    }
+}</code></pre><!--</details>-->
+
+
+<blockquote>
+<p>src/commands/cli/inquirer.ts完整代码</p>
+</blockquote>
+<!--<details>-->
+<!--<summary>展开查看src/commands/cli/inquirer.ts完整代码</summary>-->
+
+<pre><code>export const initInquire: SayaSpace.InitInquire[] = [
+    {
+        type: &#39;input&#39;,
+        name: &#39;description&#39;,
+        message: &#39;请输入项目描述&#39;
+    },
+    {
+        type: &#39;input&#39;,
+        name: &#39;author&#39;,
+        message: &#39;请输入作者名称&#39;
+    },
+    {
+        type: &#39;input&#39;,
+        name: &#39;version&#39;,
+        message: &#39;请输入版本号&#39;,
+        default: &#39;1.0.0&#39;
+    }
+]</code></pre><!--</details>-->
+
+
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a><span id="run">运行</span></h2><blockquote>
+<p>1.根目录下执行tsc 会生成lib文件夹<br>运行 <code>node ./lib/bin/man.js ***(你定义的命令)</code><br>需全局安装<code>tsc</code></p>
+</blockquote>
+<blockquote>
+<p>2.根目录下执行<code>ts-node ./src/bin/main.ts ***(你定义的命令)</code><br>需全局安装 <code>ts-node</code></p>
+</blockquote>
+<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a><span id="thx">致谢</span></h2><blockquote>
+<p>以上是使用node+ts完成的脚手架生成项目的全部内容欢迎提出各种问题，感谢</p>
+</blockquote>
+
+            </div>
+            <hr />
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #rewardModal.modal {
+        max-height: none;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        /* height: 350px; */
+    }
+
+    #rewardModal .reward-title {
+        margin: 30px auto 15px;
+        padding-bottom: 5px;
+        line-height: 30px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">写作不易,客官打赏一杯奶茶？</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+
+        </div>
+    </div>
+
+    
+    <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '5be8ea3b18c23601a9fa',
+        clientSecret: 'd0426e3d563d53c38b81f6fb31588447d467b123',
+        repo: 'bloodcv.github.io',
+        owner: 'bloodcv',
+        admin: 'bloodcv',
+        id: '2021/05/13/scaffold-create/',
+        proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/08/16/leetcode-977/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="LeetCode_977_有序数组的平方">
+                        
+                        <span class="card-title">LeetCode_977_有序数组的平方</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            977 有序数组的平方题目
+给你一个按 非递减顺序 排序的整数数组 nums，返回 每个数字的平方 组成的新数组，要求也按 非递减顺序 排序。
+
+示例 1：
+
+输入：nums = [-4,-1,0,3,10]
+输出：[0,1,9,16,10
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-08-16
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/编程算法/" class="post-category" target="_blank">
+                                    编程算法
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/leetcode/" target="_blank">
+                        <span class="chip bg-color">leetcode</span>
+                    </a>
+                    
+                    <a href="/tags/算法/" target="_blank">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/19/react-create/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="基于create-react-app 创建react项目">
+                        
+                        <span class="card-title">基于create-react-app 创建react项目</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            创建项目create-react-app .npm start
+默认项目目录//默认
+├── package.json
+├── public                  # 这个是webpack的配置的静态目录
+│   ├── fav
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-04-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/基建/" class="post-category" target="_blank">
+                                    基建
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/React/" target="_blank">
+                        <span class="chip bg-color">React</span>
+                    </a>
+                    
+                    <a href="/tags/项目搭建/" target="_blank">
+                        <span class="chip bg-color">项目搭建</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Saya's Blog<br />'
+            + '作者: saya<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
+    });
+</script>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+<!-- 开始畅言 -->
+<!--PC版-->
+<!-- <div id="SOHUCS" sid="请将此处替换为配置SourceID的语句"></div>
+<script charset="utf-8" type="text/javascript" src="https://cy-cdn.kuaizhan.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+window.changyan.api.config({
+appid: 'cyvdbWXpU',
+conf: 'prod_14cf5cac9b6d384ef4bccb7a3564646f'
+});
+</script> -->
+<!-- 结束畅言 -->
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            &copy; 2020-2020 Saya. 版权所有
+
+            
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+            <span class="white-color">8k</span>
+            
+
+            <br>
+            <span id="sitetime"></span>
+
+            
+            
+            <br>
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <i class="fa fa-heart-o"></i>
+                本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv" style='display:none'>
+                人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+            </span>
+            
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/bloodcv" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:554365000@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+        var pvcountOffset = 80000; // 初始化首次数据
+        var uvcountOffset = 20000;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int); // 停止检测
+            }
+        }
+    });
+</script>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        // var t1 = Date.UTC(2017, 09, 11, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t1 = Date.UTC(2020, 12, 18, 18, 00, 00); //北京时间2020-12-18 18:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', '');
+</script>
+
+
+
+    
+    <script src="/libs/others/clicklove.js"></script>
+    
+
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+</body>
+
+</html>

@@ -1,3 +1,8 @@
+https://bloodcv.github.io/2021/08/16/leetcode-167/
+https://bloodcv.github.io/2021/08/16/leetcode-189/
+https://bloodcv.github.io/2021/08/16/leetcode-283/
+https://bloodcv.github.io/2021/08/16/leetcode-977/
+https://bloodcv.github.io/2021/05/13/scaffold-create/
 https://bloodcv.github.io/2021/04/19/react-create/
 https://bloodcv.github.io/2020/12/18/test-title/
 https://bloodcv.github.io/2020/02/16/sort-algorithms/
