@@ -1,5 +1,8 @@
-https://bloodcv.github.io/2021/08/16/leetcode-167/
-https://bloodcv.github.io/2021/08/16/leetcode-189/
+https://bloodcv.github.io/2021/08/24/leetcode-03/
+https://bloodcv.github.io/2021/08/23/leetcode-19/
+https://bloodcv.github.io/2021/08/18/leetcode-876/
+https://bloodcv.github.io/2021/08/17/leetcode-167/
+https://bloodcv.github.io/2021/08/17/leetcode-189/
 https://bloodcv.github.io/2021/08/16/leetcode-283/
 https://bloodcv.github.io/2021/08/16/leetcode-977/
 https://bloodcv.github.io/2021/05/13/scaffold-create/
