@@ -1,3 +1,5 @@
+https://bloodcv.github.io/2021/09/01/mac-linux-git-deng-chang-yong-ming-ling-xing-cao-zuo/
+https://bloodcv.github.io/2021/08/25/leetcode-733/
 https://bloodcv.github.io/2021/08/24/leetcode-03/
 https://bloodcv.github.io/2021/08/23/leetcode-19/
 https://bloodcv.github.io/2021/08/18/leetcode-876/
