@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://bloodcv.github.io/2021/05/13/scaffold-create/</loc>
+    
+    <lastmod>2021-09-01T03:33:33.681Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://bloodcv.github.io/2020/02/16/sort-algorithms/</loc>
     
-    <lastmod>2021-09-01T03:26:38.023Z</lastmod>
+    <lastmod>2021-09-01T03:33:24.166Z</lastmod>
     
   </url>
   
@@ -79,21 +86,14 @@
   </url>
   
   <url>
-    <loc>https://bloodcv.github.io/2021/05/13/scaffold-create/</loc>
-    
-    <lastmod>2021-08-16T03:05:50.326Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://bloodcv.github.io/friends/index.html</loc>
+    <loc>https://bloodcv.github.io/tags/index.html</loc>
     
     <lastmod>2021-08-13T01:44:10.031Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://bloodcv.github.io/tags/index.html</loc>
+    <loc>https://bloodcv.github.io/friends/index.html</loc>
     
     <lastmod>2021-08-13T01:44:10.031Z</lastmod>
     
@@ -114,14 +114,14 @@
   </url>
   
   <url>
-    <loc>https://bloodcv.github.io/archives/index.html</loc>
+    <loc>https://bloodcv.github.io/about/index.html</loc>
     
     <lastmod>2021-08-13T01:44:10.027Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://bloodcv.github.io/about/index.html</loc>
+    <loc>https://bloodcv.github.io/archives/index.html</loc>
     
     <lastmod>2021-08-13T01:44:10.027Z</lastmod>
     
