@@ -4,21 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="test title, saya bloodcv 华中科技大学 hust 前端">
+    <meta name="keywords" content="promiseA+规范梳理, saya bloodcv 华中科技大学 hust 前端">
     <!-- 原来的，下面的是我的<meta name="baidu-site-verification" content="fmlEuI34ir" /> -->
     <meta name="baidu-site-verification" content="code-u00NyJAFAk">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="依赖
-
-
-
-概述
-主要依赖如下
-
-commander _可以自动的解析命令和参数，用于处理用户输入的命令_
-download-git-repo _下载并提取 git 仓库，用于下载项目模板_
-inquirer _通用的命令行用户界面集合，用">
+    <meta name="description" content="PromiseA+规范术语
+promise 是一个有 then 方法的对象或者函数，行为遵循本规范
+thenable是一个有 then 方法的对象或者函数
+value 是 promise 状态成功时的值，也就是 resolve 的参数，包括">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +20,7 @@ inquirer _通用的命令行用户界面集合，用">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>test title | Saya&#39;s Blog</title>
+    <title>promiseA+规范梳理 | Saya&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -263,7 +257,7 @@ inquirer _通用的命令行用户界面集合，用">
 <script src="/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -276,13 +270,13 @@ inquirer _通用的命令行用户界面集合，用">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        test title
+                        promiseA+规范梳理
                     </div>
                 </div>
             </div>
@@ -392,11 +386,24 @@ inquirer _通用的命令行用户界面集合，用">
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        <span class="chip bg-color">无标签</span>
+                        
+                        <a href="/tags/promiseA-规范/" target="_blank">
+                            <span class="chip bg-color">promiseA+规范</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/promise/" class="post-category" target="_blank">
+                            promise
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -404,7 +411,7 @@ inquirer _通用的命令行用户界面集合，用">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-18
+                    2021-09-27
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -418,14 +425,14 @@ inquirer _通用的命令行用户界面集合，用">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    191
+                    977
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
                 
@@ -441,26 +448,87 @@ inquirer _通用的命令行用户界面集合，用">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a><span id="dep">依赖</span></h2><div align="middle"><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1344897943&auto=1&height=66"></iframe></div>
-
-
-<ul>
-<li><strong>概述</strong><blockquote>
-<p>主要依赖如下</p>
-<ul>
-<li>commander _可以自动的解析命令和参数，用于处理用户输入的命令_</li>
-<li>download-git-repo _下载并提取 git 仓库，用于下载项目模板_</li>
-<li>inquirer _通用的命令行用户界面集合，用于和用户进行交互_</li>
-<li>handlebars _模板引擎，将用户提交的信息动态填充到文件中_</li>
-<li>ora _下载过程久的话，可以用于显示下载中的动画效果_</li>
-<li>chalk _可以给终端的字体加上颜色_</li>
-<li>log-symbols _可以在终端上显示出 √ 或 × 等的图标_</li>
-<li>shelljs _命令行操作工具,通过代码执行shell语句_</li>
-<li>fs-extra _支持对文件的各种操作_</li>
+                <h1 id="PromiseA-规范"><a href="#PromiseA-规范" class="headerlink" title="PromiseA+规范"></a>PromiseA+规范</h1><h2 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h2><ol>
+<li>promise 是一个有 then 方法的对象或者函数，行为遵循本规范</li>
+<li>thenable是一个有 then 方法的对象或者函数</li>
+<li>value 是 promise 状态成功时的值，也就是 resolve 的参数，包括各种数据类型，也包括 undefined/thenable 或者是promise</li>
+<li>reason 是 promise 状态失败时的值，也就是 reject 的参数，表示拒绝的原因</li>
+<li>exception 是一个使用 throw 抛出的异常值</li>
+</ol>
+<h2 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h2><h3 id="Promise-States"><a href="#Promise-States" class="headerlink" title="Promise States"></a>Promise States</h3><ul>
+<li>promise 应该有三种状态 ⚠️注意他们之间的流转关系</li>
 </ul>
-</blockquote>
+<ol>
+<li><p>pending  </p>
+<p> 1.1 初始的状态，可改变<br> 1.2 一个 promise 在 resolve 或者 reject 前应该都属于这个状态<br> 1.3 可以通过 resolve –&gt; fulfilled 状态<br> 1.4 可以通过 reject –&gt; rejected 状态  </p>
+</li>
+<li><p>fulfilled</p>
+<p> 2.1 最终状态，不可改变<br> 2.2 一个 promise 通过 resolve 后会变成这个状态<br> 2.3 必须拥有一个 value 值  </p>
+</li>
+<li><p>rejected</p>
+<p> 3.1 最终状态，不可改变<br> 3.2 一个 promise 通过 reject 后会变成这个状态<br> 3.3 必须拥有一个 reason 值  </p>
+</li>
+<li><p>总结：promise 的状态流转</p>
+<p> 4.1 pending –&gt; resolve(value) –&gt; fulfilled<br> 4.2 pending –&gt; reject(reason) –&gt; rejected  </p>
+</li>
+</ol>
+<p><img src="promise.jpg" alt="promise状态流转"></p>
+<h3 id="then"><a href="#then" class="headerlink" title="then"></a>then</h3><ul>
+<li>promise 应该提供一个 then 方法， 用来访问最终的结果，无论是 value 还是 reason</li>
+</ul>
+<p><code>promise.then(onFulfilled, onRejected)</code></p>
+<ol>
+<li><p>参数要求</p>
+<p> 1.1 onFulfilled <code>必须</code>是函数类型，如果不是函数，应该被忽略<br> 1.2 onRejected <code>必须</code>是函数类型，如果不是函数，应该被忽略  </p>
+</li>
+<li><p>onFulfilled 特性</p>
+<p> 2.1 在 promise 变成 fulfilled 时，应该调用 onFulfilled，参数是 value<br> 2.2 在 promise 变成 fulfilled 之前，不应该被调用<br> 2.3 <code>只能</code>被调用<code>一次</code>(所以在实现的时候需要使用一个变量来限制执行次数)  </p>
+</li>
+<li><p>onRejected 特性</p>
+<p> 3.1 在 promise 变成 rejected 时，应该调用 onRejected，参数是 reason<br> 3.2 在 promise 变成 rejected 之前，不应该被调用<br> 3.3 <code>只能</code>被调用<code>一次</code>(所以在实现的时候需要使用一个变量来限制执行次数)</p>
+</li>
+<li><p>onFulfilled 和 onRejected 应该是微任务</p>
+<p> 这里用queueMicrotask来实现微任务的调用</p>
+</li>
+<li><p>then 方法可以被调用多次</p>
+<p> 5.1 promise 状态变成 fulfilled 后，所有的 onFulfilled 回调都需要按照 then 的顺序执行，也就是按照 then 的注册顺序执行(所以在实现的时候，需要一个数组存放多个 onFulfilled 的回调)<br> 5.2 promise 状态变成 rejected 后，所有的 onRejected 回调都需要按照 then 的顺序执行，也就是按照 then 的注册顺序执行(所以在实现的时候，需要一个数组存放多个 onRejected 的回调)</p>
+</li>
+<li><p>返回值</p>
+<p> then 应该返回一个 promise</p>
+<p> <code>promise2 = promise1.then(onFulfilled, onRejected)</code></p>
+<p> 6.1 onFulfilled 或 onRejected 的执行结果为 x，调用resolvePromise<br> 6.2 如果 onFulfilled 或 onRejected 执行时抛出异常 e，promise2 需要被 reject<br> 6.3 如果 onFulfilled 不是一个函数，promise2 以 promise1 的 value 触发 fulfilled<br> 6.4 如果 onRejected 不是一个函数，promise2 以 promise1 的 reason 触发 rejected</p>
+</li>
+<li><p>resolvePromise（这段建议结合代码去看）</p>
+<p><code>resolvePromise(promise2, x, resolve, reject)</code></p>
+<p>7.1 如果 promise2 === x 那么 reject TypeError<br>7.2 如果 x 是一个 promise</p>
+<ul>
+<li>7.2.1 如果 x 是 pending 态，那么 promise 必须要在 pending ，直到 x 变成 fulfilled 或 rejected</li>
+<li>7.2.2 如果 x 被 fulfilled，fulfill promise width the same value</li>
+<li>7.2.3 如果 x 被 rejected，reject promise width the same reason</li>
+</ul>
+<p>7.3 如果 x 是一个 Object 或者是一个 Function  </p>
+<p> <code>let then = x.then</code></p>
+<ul>
+<li><p>7.3.1 如果 x.then 这步出错，那么 reject promise width e as the reason  </p>
+</li>
+<li><p>7.3.2 如果 then 不是一个 function ，fulfill promise width x</p>
+</li>
+<li><p>7.3.2 如果 then 是一个 function  </p>
+<p><code>then.call(x, resolvePromiseFn, rejectPromise)</code></p>
+<ul>
+<li>resolvePromiseFn 的 入参是 y, 执行 resolvePromise(promise2, y, resolve, reject);</li>
+<li>rejectPromise 的 入参是 r, reject promise with r.</li>
+<li>如果 resolvePromise 和 rejectPromise 都调用了，那么第一个调用优先，后面的调用忽略。</li>
+<li>如果调用then抛出异常e<ul>
+<li>如果 resolvePromise 或 rejectPromise 已经被调用，那么忽略</li>
+<li>否则，reject promise with e as the reason</li>
+</ul>
 </li>
 </ul>
+</li>
+</ul>
+</li>
+</ol>
 
             </div>
             <hr />
@@ -628,7 +696,7 @@ inquirer _通用的命令行用户界面集合，用">
         repo: 'bloodcv.github.io',
         owner: 'bloodcv',
         admin: 'bloodcv',
-        id: '2020/12/18/test-title/',
+        id: '2021/09/27/promisea-gui-fan-shu-li/',
         proxy: 'https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
@@ -654,35 +722,31 @@ inquirer _通用的命令行用户界面集合，用">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/19/react-create/">
+                <a href="/2021/10/13/promise-shi-xian-guo-cheng/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="基于create-react-app 创建react项目">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="promise实现过程">
                         
-                        <span class="card-title">基于create-react-app 创建react项目</span>
+                        <span class="card-title">promise实现过程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            创建项目create-react-app .npm start
-默认项目目录//默认
-├── package.json
-├── public                  # 这个是webpack的配置的静态目录
-│   ├── fav
+                            本文梳理了手写 promise 的过程
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-04-19
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-10-13
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/基建/" class="post-category" target="_blank">
-                                    基建
+                            <a href="/categories/promise/" class="post-category" target="_blank">
+                                    promise
                                 </a>
                             
                             
@@ -692,12 +756,8 @@ inquirer _通用的命令行用户界面集合，用">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/项目搭建/" target="_blank">
-                        <span class="chip bg-color">项目搭建</span>
-                    </a>
-                    
-                    <a href="/tags/React/" target="_blank">
-                        <span class="chip bg-color">React</span>
+                    <a href="/tags/promiseA-规范/" target="_blank">
+                        <span class="chip bg-color">promiseA+规范</span>
                     </a>
                     
                 </div>
@@ -711,31 +771,40 @@ inquirer _通用的命令行用户界面集合，用">
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/02/16/sort-algorithms/">
+                <a href="/2021/09/01/mac-linux-git-deng-chang-yong-ming-ling-xing-cao-zuo/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="不可见">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="mac-linux-git等常用命令行操作">
                         
-                        <span class="card-title">不可见</span>
+                        <span class="card-title">mac-linux-git等常用命令行操作</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文整理并总结了十大经典的排序算法（冒泡排序、选择排序、插入排序、快速排序、归并排序、希尔排序、计数排序、基数排序、桶排序、堆排序）的时间复杂度、空间复杂度等性质。
+                            Ctrl-Line
+Ctrl + d
+删除一个字符，相当于通常的Delete键（命令行若无所有字符，则相当于exit；处理多行标准输入时也表示eof）
+
+
+Ctrl + h
+退格删除一个字符，相当于通常的Backspace键
+
+
+Ctrl 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-02-16
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-09-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/编程算法/" class="post-category" target="_blank">
-                                    编程算法
+                            <a href="/categories/常用操作/" class="post-category" target="_blank">
+                                    常用操作
                                 </a>
                             
                             
@@ -745,12 +814,12 @@ inquirer _通用的命令行用户界面集合，用">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/leetcode/" target="_blank">
-                        <span class="chip bg-color">leetcode</span>
+                    <a href="/tags/快捷键/" target="_blank">
+                        <span class="chip bg-color">快捷键</span>
                     </a>
                     
-                    <a href="/tags/算法/" target="_blank">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/终端/" target="_blank">
+                        <span class="chip bg-color">终端</span>
                     </a>
                     
                 </div>

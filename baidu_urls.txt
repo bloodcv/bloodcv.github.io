@@ -1,3 +1,5 @@
+https://bloodcv.github.io/2021/10/13/promise-shi-xian-guo-cheng/
+https://bloodcv.github.io/2021/09/27/promisea-gui-fan-shu-li/
 https://bloodcv.github.io/2021/09/01/mac-linux-git-deng-chang-yong-ming-ling-xing-cao-zuo/
 https://bloodcv.github.io/2021/08/25/leetcode-733/
 https://bloodcv.github.io/2021/08/24/leetcode-03/
